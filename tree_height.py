@@ -20,12 +20,14 @@ def main():
         inputResult = compute_height(numberInput,valueInput)
         print(inputResult)
     elif chose in "F" or chose in "f": 
-        openFilename = input()
+         openFilename = input()
         if openFilename in "a":
-            return;        
+            return        
         else:            
-            file = open(openFilename,"r")
-            fileResult = compute_height(file,1)
+            with open(openFilename) as f:
+                for line in f:
+                    print(line.strip())
+            fileResult = compute_height(f,1)
             print(fileResult)
     # implement input form keyboard and from files
     
