@@ -14,9 +14,9 @@ def compute_height(n, parents):
 def main():
 choose = input()
 fileInput = input()
-If choose == "I":
+If choose in "I" or choose in "i":
 i = input()
-Elif choose == "F":
+Elif choose in "F" or choose in "f":
 
 print
     # implement input form keyboard and from files
@@ -35,3 +35,6 @@ print
 sys.setrecursionlimit(10**7)  # max depth of recursion
 threading.stack_size(2**27)   # new thread will get stack of such size
 threading.Thread(target=main).start()
+
+if __name__ == "__main__":
+    main()
