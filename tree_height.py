@@ -2,7 +2,7 @@
 
 import sys
 import threading
-
+import numpy
 
 def compute_height(n, parents):
     # Write this function
@@ -12,6 +12,13 @@ def compute_height(n, parents):
 
 
 def main():
+choose = input()
+fileInput = input()
+If choose == "I":
+i = input()
+Elif choose == "F":
+
+print
     # implement input form keyboard and from files
     
     # let user input file name to use, don't allow file names with letter a
