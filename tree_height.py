@@ -35,8 +35,8 @@ def main():
         inputResult = compute_height(numberInput,valueInput)
         print(inputResult)
     elif chose in "F" or chose in "f": 
-         openFilename = input()
-        if "a" in openFilename:
+        openFilename = input()
+        if "a" in openFilename :
             return        
         else:            
             with open(openFilename) as f:
