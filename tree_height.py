@@ -21,15 +21,12 @@ def compute_height(countOfSymbols, parentsSymbols):
             heights += 1
             element = parentsSymbols[k]
         heightsArray[i] = heights
-        max_height = max(max_height,heightsArray[i])
-        
-   
+        max_height = max(max_height,heightsArray[i])          
     return max_height
 
-
 def main():
-    chose = input()
-    if "I" in chose  or "i" in chose :
+    actionChoose = input()
+    if "I" in actionChoose  or "i" in actionChoose:
         numberInput = int(input()) # input as integer (number of symbols)
         valueInput = input() # symbols 
         valueInput = valueInput.split()
@@ -37,7 +34,7 @@ def main():
         parentsSymbols = parentsSymbols.astype(int)
         inputResult = compute_height(numberInput,parentsSymbols)
         print(inputResult)
-    elif "F" in chose  or "f" in chose : 
+    elif "F" in actionChoose  or "f" in actionChoose: 
         openFilename = input()
         if "a" in openFilename:
             return        
