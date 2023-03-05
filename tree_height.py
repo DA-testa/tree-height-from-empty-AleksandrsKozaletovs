@@ -36,7 +36,7 @@ def main():
         print(inputResult)
     elif chose in "F" or chose in "f": 
          openFilename = input()
-        if openFilename in "a":
+        if "a" in openFilename:
             return        
         else:            
             with open(openFilename) as f:
