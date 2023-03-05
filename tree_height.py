@@ -29,14 +29,14 @@ def compute_height(countOfSymbols, parentsSymbols):
 
 def main():
     chose = input()
-    if chose in "I" or chose in "i":
+    if "I" in chose  or "i" in chose :
         numberInput = input()
         valueInput = input()
         inputResult = compute_height(numberInput,valueInput)
         print(inputResult)
-    elif chose in "F" or chose in "f": 
+    elif "F" in chose  or "f" in chose : 
         openFilename = input()
-        if "a" in openFilename :
+        if "a" in openFilename:
             return        
         else:            
             with open(openFilename) as f:
@@ -44,6 +44,8 @@ def main():
                     print(line.strip())
             fileResult = compute_height(f,1)
             print(fileResult)
+    else:
+        return
     # implement input form keyboard and from files
     
     # let user input file name to use, don't allow file names with letter a
