@@ -40,10 +40,11 @@ def main():
             return        
         else:            
             with open(openFilename) as f:
-                for line in f:
-                    print(line.strip())
-            fileResult = compute_height(f,1)
-            print(fileResult)
+                elementCount = int(f.readline()) # 
+                textParentsSymbols = f.readline().split()
+                parentsSymbols = numpy.array(textParentsSymbols).astype(int)                                              
+                fileResult = compute_height(elementCount,parentsSymbols)
+                print(fileResult)
     else:
         return
     # implement input form keyboard and from files
