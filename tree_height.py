@@ -19,7 +19,7 @@ def compute_height(countOfSymbols, parentsSymbols):
                 heights += heightsArray[element] -1
                 break
             heights += 1
-            element = parentsSymbols[k]
+            element = parentsSymbols[element]
         heightsArray[i] = heights
         max_height = max(max_height,heightsArray[i])          
     return max_height
