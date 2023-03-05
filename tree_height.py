@@ -30,9 +30,12 @@ def compute_height(countOfSymbols, parentsSymbols):
 def main():
     chose = input()
     if "I" in chose  or "i" in chose :
-        numberInput = input()
-        valueInput = input()
-        inputResult = compute_height(numberInput,valueInput)
+        numberInput = int(input()) # input as integer (number of symbols)
+        valueInput = input() # symbols 
+        valueInput = valueInput.split()
+        parentsSymbols = numpy.array(valueInput)
+        parentsSymbols = parentsSymbols.astype(int)
+        inputResult = compute_height(numberInput,parentsSymbols)
         print(inputResult)
     elif "F" in chose  or "f" in chose : 
         openFilename = input()
