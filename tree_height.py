@@ -39,7 +39,7 @@ def main():
         if "a" in openFilename:
             return        
         else:            
-            with open(openFilename) as f:
+            with open("./test/" + openFilename,mode = "r") as f:
                 elementCount = int(f.readline()) # 
                 textParentsSymbols = f.readline().split()
                 parentsSymbols = numpy.array(textParentsSymbols).astype(int)                                              
